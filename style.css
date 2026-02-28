@@ -1,0 +1,51 @@
+body {
+  display: flex;             /* 1. Enable Flexbox */
+  justify-content: center;   /* 2. Centers horizontally */
+  align-items: center;       /* 3. Centers vertically */
+  min-height: 100vh;         /* 4. Ensures the container takes full screen height */
+}
+
+
+.card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures image corners match card corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  transition: transform 0.3s ease; /* For hover effect */
+  background-color: #fff;
+}
+
+/* Hover effect to make it interactive */
+.card:hover {
+  transform: translateY(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form {
+  padding: 20px;
+}
+
+.card-body h3 {
+  margin: 0 0 10px 0;
+}
+
+.submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  
+}
+
+input {
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 12px;
+  border: black solid;
+  border-radius: 10px;
+}
