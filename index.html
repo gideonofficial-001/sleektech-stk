@@ -1,19 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello, World!</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sleek POS - M-Pesa Payment</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <form class="form">
-      <h3>Sleek Tech Enterprises</h3>
-      <input type="number" name="phone" placeholder="Phone number" required>
-      <input type="number" name="amount" placeholder="Amount" required>
-      <button type="submit" class="submit"><strong>Make Payment</strong></button>
+
+  <div class="container">
+    <h1>Sleek POS</h1>
+    <h2>M-Pesa Payment</h2>
+
+    <form id="paymentForm">
+      <label>Customer Phone</label>
+      <input type="text" id="phone" placeholder="0712345678" required />
+
+      <label>Amount (KES)</label>
+      <input type="number" id="amount" placeholder="Enter amount" required />
+
+      <button type="submit">Initiate STK Push</button>
     </form>
+
+    <div id="statusMessage"></div>
   </div>
+
+<script>
+const backendUrl = "https://YOUR-RENDER-APP.onrender.com/api/stkpush";
+
+document.getElementById('paymentForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const phone = document.getElementById('phone').value;
+  const amount = document.getElementById('amount').value;
+  const statusDiv = document.getElementById('statusMessage');
+
+  statusDiv.innerText = "Sending STK Push...";
+  statusDiv.className = "info";
+
+  try {
+    const response = await fetch(backendUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone, amount })
+    });
+
+    const data = await response.json();
+
+    if (data.ResponseCode === "0") {
+      statusDiv.innerText = "STK Sent. Ask customer to enter PIN.";
+      statusDiv.className = "success";
+    } else {
+      statusDiv.innerText = data.errorMessage || "STK failed.";
+      statusDiv.className = "error";
+    }
+
+  } catch (err) {
+    statusDiv.innerText = "Server unreachable.";
+    statusDiv.className = "error";
+  }
+});
+</script>
+
 </body>
 </html>
-  
