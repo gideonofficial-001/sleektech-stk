@@ -14,7 +14,14 @@
 
     <form id="paymentForm">
       <label>Customer Phone</label>
-      <input type="number" id="phone" placeholder="0712345678" required />
+      <input
+  type="tel"
+  id="phone"
+  placeholder="0712345678"
+  pattern="[0-9]{10,12}"
+  maxlength="12"
+  required
+/>
 
       <label>Amount (KES)</label>
       <input type="number" id="amount" placeholder="Enter amount" required />
