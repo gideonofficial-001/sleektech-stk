@@ -14,7 +14,7 @@
 
     <form id="paymentForm">
       <label>Customer Phone</label>
-      <input type="text" id="phone" placeholder="0712345678" required />
+      <input type="number" id="phone" placeholder="0712345678" required />
 
       <label>Amount (KES)</label>
       <input type="number" id="amount" placeholder="Enter amount" required />
@@ -26,7 +26,7 @@
   </div>
 
 <script>
-const backendUrl = "https://YOUR-RENDER-APP.onrender.com/api/stkpush";
+const backendUrl = "https://sleek-pos-backend.onrender.com/api/stkpush";
 
 document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   e.preventDefault();
