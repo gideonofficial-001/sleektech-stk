@@ -1,51 +1,71 @@
 body {
-  display: flex;             /* 1. Enable Flexbox */
-  justify-content: center;   /* 2. Centers horizontally */
-  align-items: center;       /* 3. Centers vertically */
-  min-height: 100vh;         /* 4. Ensures the container takes full screen height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
-.card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden; /* Ensures image corners match card corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
-  transition: transform 0.3s ease; /* For hover effect */
-  background-color: #fff;
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* Hover effect to make it interactive */
-.card:hover {
-  transform: translateY(5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #1e88e5;
 }
 
-.form {
-  padding: 20px;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #555;
 }
 
-.card-body h3 {
-  margin: 0 0 10px 0;
-}
-
-.submit {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+label {
+  font-size: 14px;
+  margin-top: 10px;
   display: block;
-  margin: 10px auto;
-  
 }
 
 input {
+  width: 100%;
   padding: 10px;
-  width: 90%;
-  margin-bottom: 12px;
-  border: black solid;
-  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #43a047;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+#statusMessage {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.success { color: green; }
+.error { color: red; }
+.info { color: #1e88e5; }
