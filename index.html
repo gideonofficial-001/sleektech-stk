@@ -33,7 +33,6 @@
       position: relative;
     }
 
-    /* Ambient blobs */
     body::before {
       content: '';
       position: fixed;
@@ -72,16 +71,9 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 36px;
-    }
+    .header { text-align: center; margin-bottom: 36px; }
     .logo-wrap {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 6px;
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px;
     }
     .logo-icon {
       width: 40px; height: 40px;
@@ -93,66 +85,30 @@
     }
     .logo-name {
       font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 22px;
-      letter-spacing: -0.5px;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.5px;
       background: linear-gradient(90deg, #fff, var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .tagline {
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.4px;
-    }
+    .tagline { font-size: 13px; color: var(--muted); letter-spacing: 0.4px; }
 
-    /* Card */
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 28px 24px 32px;
-      backdrop-filter: blur(10px);
       box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(59,181,106,0.12);
     }
 
-    .card-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .card-sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
+    .card-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+    .card-sub   { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
 
-    /* Input group */
-    .field {
-      margin-bottom: 18px;
-    }
+    .field { margin-bottom: 18px; }
     label {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      display: block; font-size: 12px; font-weight: 500;
+      color: var(--muted); letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 8px;
     }
-    .input-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .input-icon {
-      position: absolute;
-      left: 14px;
-      font-size: 16px;
-      color: var(--green);
-      pointer-events: none;
-    }
+    .input-wrap { position: relative; display: flex; align-items: center; }
+    .input-icon { position: absolute; left: 14px; font-size: 16px; color: var(--green); pointer-events: none; }
     input {
       width: 100%;
       background: rgba(255,255,255,0.04);
@@ -166,30 +122,18 @@
       transition: border-color .2s, box-shadow .2s;
     }
     input::placeholder { color: rgba(123,170,138,0.4); }
-    input:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(59,181,106,0.12);
-    }
+    input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(59,181,106,0.12); }
 
-    /* Amount grid */
-    .amount-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-bottom: 18px;
-    }
+    .amount-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
     .preset-btn {
       background: rgba(59,181,106,0.07);
       border: 1px solid var(--border);
       border-radius: 10px;
       color: var(--green);
       font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 9px 6px;
-      cursor: pointer;
-      transition: all .18s;
-      text-align: center;
+      font-size: 13px; font-weight: 500;
+      padding: 9px 6px; cursor: pointer;
+      transition: all .18s; text-align: center;
     }
     .preset-btn:hover, .preset-btn.active {
       background: rgba(59,181,106,0.18);
@@ -197,111 +141,55 @@
       box-shadow: 0 0 12px rgba(59,181,106,0.2);
     }
 
-    /* Pay button */
     .pay-btn {
       width: 100%;
       background: linear-gradient(135deg, var(--green), var(--green-dark));
-      border: none;
-      border-radius: 14px;
-      color: #fff;
-      cursor: pointer;
+      border: none; border-radius: 14px;
+      color: #fff; cursor: pointer;
       font-family: 'Syne', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      padding: 16px;
-      margin-top: 8px;
-      position: relative;
-      overflow: hidden;
+      font-size: 16px; font-weight: 700; letter-spacing: 0.3px;
+      padding: 16px; margin-top: 8px;
+      position: relative; overflow: hidden;
       transition: transform .15s, box-shadow .15s;
       box-shadow: 0 4px 20px rgba(59,181,106,0.35);
     }
-    .pay-btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(59,181,106,0.45);
-    }
+    .pay-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(59,181,106,0.45); }
     .pay-btn:active:not(:disabled) { transform: translateY(0); }
     .pay-btn:disabled { opacity: 0.6; cursor: not-allowed; }
     .pay-btn .btn-shine {
-      position: absolute;
-      top: -50%; left: -60%;
+      position: absolute; top: -50%; left: -60%;
       width: 50%; height: 200%;
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-      transform: skewX(-20deg);
-      transition: left .5s;
-      pointer-events: none;
+      transform: skewX(-20deg); transition: left .5s; pointer-events: none;
     }
     .pay-btn:hover .btn-shine { left: 120%; }
 
-    /* Status box */
     .status-box {
-      margin-top: 20px;
-      border-radius: 12px;
-      padding: 14px 16px;
-      font-size: 14px;
-      display: none;
-      animation: fadeUp .3s ease both;
+      margin-top: 20px; border-radius: 12px; padding: 14px 16px;
+      font-size: 14px; display: none; animation: fadeUp .3s ease both;
     }
-    .status-box.info  { background: rgba(59,181,106,0.1); border: 1px solid rgba(59,181,106,0.3); color: var(--green); }
-    .status-box.error { background: rgba(220,60,60,0.1); border: 1px solid rgba(220,60,60,0.3); color: #f87171; }
-    .status-box.success { background: rgba(59,181,106,0.15); border: 1px solid var(--green); color: #86efac; }
+    .status-box.info    { background: rgba(59,181,106,0.1);  border: 1px solid rgba(59,181,106,0.3); color: var(--green); }
+    .status-box.error   { background: rgba(220,60,60,0.1);   border: 1px solid rgba(220,60,60,0.3);  color: #f87171; }
+    .status-box.success { background: rgba(59,181,106,0.15); border: 1px solid var(--green);          color: #86efac; }
 
-    /* Spinner */
     .spinner {
-      display: inline-block;
-      width: 14px; height: 14px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      vertical-align: middle;
-      margin-right: 8px;
+      display: inline-block; width: 14px; height: 14px;
+      border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff;
+      border-radius: 50%; animation: spin .7s linear infinite;
+      vertical-align: middle; margin-right: 8px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* Divider */
-    .divider {
-      display: flex; align-items: center; gap: 12px;
-      margin: 22px 0 18px;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* M-PESA badge */
     .mpesa-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 22px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; font-size: 12px; color: var(--muted); margin-top: 22px;
     }
-    .mpesa-badge span {
-      font-weight: 700;
-      color: var(--green);
-      font-size: 13px;
-      letter-spacing: .3px;
-    }
+    .mpesa-badge span { font-weight: 700; color: var(--green); font-size: 13px; }
 
-    /* sandbox note */
     .sandbox-note {
       display: flex; align-items: center; gap: 6px;
-      background: rgba(255,200,0,0.07);
-      border: 1px solid rgba(255,200,0,0.2);
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 12px;
-      color: #fde68a;
-      margin-bottom: 20px;
+      background: rgba(255,200,0,0.07); border: 1px solid rgba(255,200,0,0.2);
+      border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #fde68a; margin-bottom: 20px;
     }
   </style>
 </head>
@@ -332,12 +220,12 @@
     <div class="field">
       <label>Quick Amounts (KES)</label>
       <div class="amount-grid">
-        <button class="preset-btn" onclick="setAmount(50)">KES 50</button>
-        <button class="preset-btn" onclick="setAmount(100)">KES 100</button>
-        <button class="preset-btn" onclick="setAmount(250)">KES 250</button>
-        <button class="preset-btn" onclick="setAmount(500)">KES 500</button>
-        <button class="preset-btn" onclick="setAmount(1000)">KES 1,000</button>
-        <button class="preset-btn" onclick="setAmount(2000)">KES 2,000</button>
+        <button class="preset-btn" onclick="setAmount(50,this)">KES 50</button>
+        <button class="preset-btn" onclick="setAmount(100,this)">KES 100</button>
+        <button class="preset-btn" onclick="setAmount(250,this)">KES 250</button>
+        <button class="preset-btn" onclick="setAmount(500,this)">KES 500</button>
+        <button class="preset-btn" onclick="setAmount(1000,this)">KES 1,000</button>
+        <button class="preset-btn" onclick="setAmount(2000,this)">KES 2,000</button>
       </div>
     </div>
 
@@ -364,34 +252,15 @@
 
     <div class="status-box" id="statusBox"></div>
 
-    <div class="mpesa-badge">
-      🔒 Powered by <span>M-PESA</span> Daraja API
-    </div>
+    <div class="mpesa-badge">🔒 Powered by <span>M-PESA</span> Daraja API</div>
   </div>
 </div>
 
 <script>
-  // ─── Credentials (Sandbox) ───────────────────────────────────────────────
-  const CONSUMER_KEY    = 'NTy0lxNny1V5CXEMcarDHaXZ1jyiOJUNiL8LsE45hC0cfKGi';
-  const CONSUMER_SECRET = 'VwNFq9dRR4Eu8AY2hwX7LTTbkHpevqxLxt2f8wgyGFI4DfGrx36jD1Nl6xQeEffD';
-  const SHORT_CODE      = '174379';          // Sandbox test short code
-  const PASSKEY         = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
-  const CALLBACK_URL    = 'https://webhook.site/your-unique-url'; // ← Replace with your callback URL
-
-  const BASE_URL = 'https://sandbox.safaricom.co.ke';
-
-  // ─── Helpers ─────────────────────────────────────────────────────────────
-  function getTimestamp() {
-    const now = new Date();
-    const pad = n => String(n).padStart(2,'0');
-    return `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}` +
-           `${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
-  }
-
-  function setAmount(val) {
+  function setAmount(val, btn) {
     document.getElementById('amount').value = val;
     document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-    event.target.classList.add('active');
+    btn.classList.add('active');
   }
 
   function showStatus(msg, type = 'info') {
@@ -411,95 +280,50 @@
   }
 
   function formatPhone(raw) {
-    const digits = raw.replace(/\D/g,'');
-    if (digits.startsWith('0') && digits.length === 10) return '254' + digits.slice(1);
+    const digits = raw.replace(/\D/, '');
+    if (digits.startsWith('0') && digits.length === 10)   return '254' + digits.slice(1);
     if (digits.startsWith('254') && digits.length === 12) return digits;
     return null;
   }
 
-  // ─── Step 1: Get Access Token ─────────────────────────────────────────────
-  async function getAccessToken() {
-    const creds   = btoa(`${CONSUMER_KEY}:${CONSUMER_SECRET}`);
-    const res     = await fetch(`${BASE_URL}/oauth/v1/generate?grant_type=client_credentials`, {
-      method: 'GET',
-      headers: { 'Authorization': `Basic ${creds}` }
-    });
-    if (!res.ok) throw new Error('Token fetch failed — check credentials or CORS proxy.');
-    const data = await res.json();
-    return data.access_token;
-  }
-
-  // ─── Step 2: STK Push ────────────────────────────────────────────────────
-  async function stkPush(token, phone, amount, ref) {
-    const timestamp = getTimestamp();
-    const password  = btoa(`${SHORT_CODE}${PASSKEY}${timestamp}`);
-
-    const body = {
-      BusinessShortCode: SHORT_CODE,
-      Password: password,
-      Timestamp: timestamp,
-      TransactionType: 'CustomerPayBillOnline',
-      Amount: amount,
-      PartyA: phone,
-      PartyB: SHORT_CODE,
-      PhoneNumber: phone,
-      CallBackURL: CALLBACK_URL,
-      AccountReference: ref || 'SleekTech',
-      TransactionDesc: `Payment for ${ref || 'SleekTech'}`
-    };
-
-    const res = await fetch(`${BASE_URL}/mpesa/stkpush/v1/processrequest`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type':  'application/json'
-      },
-      body: JSON.stringify(body)
-    });
-    return await res.json();
-  }
-
-  // ─── Main Handler ─────────────────────────────────────────────────────────
   async function initiateStkPush() {
     const rawPhone = document.getElementById('phone').value.trim();
     const amount   = parseInt(document.getElementById('amount').value, 10);
     const ref      = document.getElementById('reference').value.trim() || 'SleekTechPay';
     const phone    = formatPhone(rawPhone);
 
-    if (!phone) return showStatus('❌ Enter a valid Safaricom number (07XX or 2547XX).', 'error');
+    if (!phone)              return showStatus('❌ Enter a valid Safaricom number (07XX or 2547XX).', 'error');
     if (!amount || amount < 1) return showStatus('❌ Enter a valid amount (min KES 1).', 'error');
 
     setLoading(true);
-    showStatus('🔐 Authenticating with M-PESA…', 'info');
+    showStatus('📲 Initiating M-PESA payment…', 'info');
 
     try {
-      const token = await getAccessToken();
-      showStatus('📲 Sending STK push to <strong>' + rawPhone + '</strong>…', 'info');
+      // ✅ Calls our Netlify serverless function — no CORS, credentials stay server-side
+      const res  = await fetch('/api/mpesa', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ phone, amount, reference: ref })
+      });
+      const data = await res.json();
 
-      const result = await stkPush(token, phone, amount, ref);
-
-      if (result.ResponseCode === '0') {
+      if (data.ResponseCode === '0') {
         showStatus(
-          '✅ <strong>STK Push Sent!</strong><br>Check your phone and enter your M-PESA PIN to complete payment.<br>' +
-          '<small style="opacity:.7">CheckoutRequestID: ' + result.CheckoutRequestID + '</small>',
+          '✅ <strong>STK Push Sent!</strong><br>' +
+          'Check your phone and enter your M-PESA PIN to complete.<br>' +
+          `<small style="opacity:.7">ID: ${data.CheckoutRequestID}</small>`,
           'success'
         );
       } else {
-        showStatus('⚠️ M-PESA Error: ' + (result.errorMessage || result.ResponseDescription || JSON.stringify(result)), 'error');
+        showStatus('⚠️ ' + (data.errorMessage || data.ResponseDescription || data.error || 'Unknown error'), 'error');
       }
     } catch (err) {
-      showStatus(
-        '❌ <strong>Request failed.</strong><br>' + err.message +
-        '<br><small style="opacity:.7">Note: Browser CORS may block direct API calls. ' +
-        'Consider using a backend proxy (Node.js/Express) or a CORS proxy for local testing.</small>',
-        'error'
-      );
+      showStatus('❌ Network error — please try again.<br><small>' + err.message + '</small>', 'error');
     } finally {
       setLoading(false);
     }
   }
 
-  // Remove active preset class when user types custom amount
   document.getElementById('amount').addEventListener('input', () => {
     document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
   });
